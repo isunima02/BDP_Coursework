@@ -1,0 +1,62 @@
+Area_Name,Congestion_Index,Collision_Count
+Wilshire,High,24557
+Southwest,High,23454
+West LA,High,22942
+77th Street,High,22292
+Hollenbeck,Medium,20543
+Foothill,Medium,20336
+Newton,High,19732
+Harbor,Medium,19234
+Pacific,High,19158
+Rampart,Medium,18645
+Olympic,High,17457
+N Hollywood,High,17341
+Northeast,Medium,17007
+Mission,Medium,16665
+Van Nuys,High,15856
+West Valley,High,15371
+Hollywood,Medium,15105
+Southeast,Medium,14392
+Devonshire,High,14290
+Devonshire,Medium,13186
+Olympic,Medium,12786
+N Hollywood,Medium,12636
+Central,Medium,12621
+Hollywood,High,12455
+West Valley,Medium,12411
+Van Nuys,Medium,12194
+Topanga,Medium,11897
+Newton,Medium,11218
+Topanga,High,11166
+Central,High,11112
+Southeast,High,11045
+77th Street,Critical,10136
+Pacific,Medium,10134
+Southwest,Medium,8491
+Northeast,High,8186
+Mission,High,7939
+Wilshire,Medium,7773
+77th Street,Medium,7671
+West LA,Medium,6916
+Rampart,High,3107
+Southwest,Critical,2404
+Harbor,High,1485
+Mission,Low,1298
+Topanga,Low,1282
+West LA,Low,1269
+Hollenbeck,Low,1171
+Harbor,Low,1152
+West Valley,Low,1147
+Devonshire,Low,1144
+Pacific,Low,1105
+Foothill,Low,1092
+Northeast,Low,1082
+Hollywood,Low,1058
+Wilshire,Low,1041
+Rampart,Low,1008
+Van Nuys,Low,980
+Central,Low,923
+Southeast,Low,870
+Olympic,Low,807
+N Hollywood,Low,652
+Newton,Low,459

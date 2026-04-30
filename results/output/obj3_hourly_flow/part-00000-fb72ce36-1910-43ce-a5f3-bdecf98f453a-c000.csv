@@ -1,0 +1,505 @@
+Area_Name,Hour,Collision_Count
+77th Street,0,1228
+77th Street,1,1162
+77th Street,2,1098
+77th Street,3,796
+77th Street,4,612
+77th Street,5,718
+77th Street,6,947
+77th Street,7,1782
+77th Street,8,1741
+77th Street,9,1442
+77th Street,10,1560
+77th Street,11,1744
+77th Street,12,2031
+77th Street,13,2095
+77th Street,14,2352
+77th Street,15,2541
+77th Street,16,2662
+77th Street,17,2772
+77th Street,18,2556
+77th Street,19,2450
+77th Street,20,2212
+77th Street,21,2032
+77th Street,22,1716
+77th Street,23,1531
+Central,0,561
+Central,1,578
+Central,2,624
+Central,3,326
+Central,4,280
+Central,5,398
+Central,6,630
+Central,7,971
+Central,8,1358
+Central,9,1425
+Central,10,1430
+Central,11,1499
+Central,12,1627
+Central,13,1629
+Central,14,1776
+Central,15,1683
+Central,16,1707
+Central,17,1850
+Central,18,1573
+Central,19,1095
+Central,20,826
+Central,21,924
+Central,22,900
+Central,23,773
+Devonshire,0,711
+Devonshire,1,622
+Devonshire,2,636
+Devonshire,3,437
+Devonshire,4,336
+Devonshire,5,429
+Devonshire,6,691
+Devonshire,7,1495
+Devonshire,8,1500
+Devonshire,9,1172
+Devonshire,10,1328
+Devonshire,11,1452
+Devonshire,12,1735
+Devonshire,13,1760
+Devonshire,14,1956
+Devonshire,15,2177
+Devonshire,16,1994
+Devonshire,17,2247
+Devonshire,18,1790
+Devonshire,19,1489
+Devonshire,20,1320
+Devonshire,21,1124
+Devonshire,22,1029
+Devonshire,23,859
+Foothill,0,688
+Foothill,1,578
+Foothill,2,516
+Foothill,3,423
+Foothill,4,308
+Foothill,5,386
+Foothill,6,555
+Foothill,7,1027
+Foothill,8,958
+Foothill,9,795
+Foothill,10,853
+Foothill,11,932
+Foothill,12,1055
+Foothill,13,1095
+Foothill,14,1164
+Foothill,15,1258
+Foothill,16,1322
+Foothill,17,1369
+Foothill,18,1318
+Foothill,19,1263
+Foothill,20,1299
+Foothill,21,1212
+Foothill,22,1025
+Foothill,23,899
+Harbor,0,562
+Harbor,1,615
+Harbor,2,671
+Harbor,3,431
+Harbor,4,343
+Harbor,5,425
+Harbor,6,519
+Harbor,7,1094
+Harbor,8,1079
+Harbor,9,864
+Harbor,10,994
+Harbor,11,1090
+Harbor,12,1242
+Harbor,13,1168
+Harbor,14,1364
+Harbor,15,1429
+Harbor,16,1389
+Harbor,17,1562
+Harbor,18,1354
+Harbor,19,1166
+Harbor,20,1145
+Harbor,21,1072
+Harbor,22,970
+Harbor,23,825
+Hollenbeck,0,595
+Hollenbeck,1,548
+Hollenbeck,2,558
+Hollenbeck,3,490
+Hollenbeck,4,313
+Hollenbeck,5,400
+Hollenbeck,6,550
+Hollenbeck,7,1135
+Hollenbeck,8,1209
+Hollenbeck,9,989
+Hollenbeck,10,973
+Hollenbeck,11,940
+Hollenbeck,12,1138
+Hollenbeck,13,1038
+Hollenbeck,14,1228
+Hollenbeck,15,1420
+Hollenbeck,16,1372
+Hollenbeck,17,1498
+Hollenbeck,18,1469
+Hollenbeck,19,1222
+Hollenbeck,20,1036
+Hollenbeck,21,879
+Hollenbeck,22,843
+Hollenbeck,23,822
+Hollywood,0,1103
+Hollywood,1,1109
+Hollywood,2,1391
+Hollywood,3,695
+Hollywood,4,337
+Hollywood,5,313
+Hollywood,6,458
+Hollywood,7,841
+Hollywood,8,1195
+Hollywood,9,1227
+Hollywood,10,1250
+Hollywood,11,1327
+Hollywood,12,1452
+Hollywood,13,1551
+Hollywood,14,1584
+Hollywood,15,1653
+Hollywood,16,1645
+Hollywood,17,1721
+Hollywood,18,1724
+Hollywood,19,1519
+Hollywood,20,1384
+Hollywood,21,1358
+Hollywood,22,1333
+Hollywood,23,1503
+Mission,0,800
+Mission,1,729
+Mission,2,711
+Mission,3,496
+Mission,4,411
+Mission,5,438
+Mission,6,688
+Mission,7,1352
+Mission,8,1161
+Mission,9,941
+Mission,10,1014
+Mission,11,1090
+Mission,12,1454
+Mission,13,1388
+Mission,14,1466
+Mission,15,1618
+Mission,16,1583
+Mission,17,1854
+Mission,18,1752
+Mission,19,1617
+Mission,20,1438
+Mission,21,1277
+Mission,22,1073
+Mission,23,988
+N Hollywood,0,1006
+N Hollywood,1,939
+N Hollywood,2,850
+N Hollywood,3,550
+N Hollywood,4,356
+N Hollywood,5,338
+N Hollywood,6,630
+N Hollywood,7,1160
+N Hollywood,8,1478
+N Hollywood,9,1320
+N Hollywood,10,1381
+N Hollywood,11,1432
+N Hollywood,12,1762
+N Hollywood,13,1854
+N Hollywood,14,1906
+N Hollywood,15,2071
+N Hollywood,16,1818
+N Hollywood,17,2076
+N Hollywood,18,2082
+N Hollywood,19,1791
+N Hollywood,20,1534
+N Hollywood,21,1509
+N Hollywood,22,1271
+N Hollywood,23,1234
+Newton,0,717
+Newton,1,748
+Newton,2,772
+Newton,3,588
+Newton,4,468
+Newton,5,579
+Newton,6,948
+Newton,7,1571
+Newton,8,1505
+Newton,9,1316
+Newton,10,1312
+Newton,11,1557
+Newton,12,1573
+Newton,13,1796
+Newton,14,1953
+Newton,15,2121
+Newton,16,2082
+Newton,17,2328
+Newton,18,2193
+Newton,19,1634
+Newton,20,1387
+Newton,21,1252
+Newton,22,1082
+Newton,23,917
+Northeast,0,719
+Northeast,1,681
+Northeast,2,711
+Northeast,3,438
+Northeast,4,326
+Northeast,5,350
+Northeast,6,514
+Northeast,7,1053
+Northeast,8,1299
+Northeast,9,1154
+Northeast,10,1242
+Northeast,11,1339
+Northeast,12,1456
+Northeast,13,1481
+Northeast,14,1612
+Northeast,15,1679
+Northeast,16,1710
+Northeast,17,1856
+Northeast,18,1736
+Northeast,19,1487
+Northeast,20,1347
+Northeast,21,1206
+Northeast,22,1156
+Northeast,23,1045
+Olympic,0,978
+Olympic,1,940
+Olympic,2,970
+Olympic,3,542
+Olympic,4,391
+Olympic,5,443
+Olympic,6,665
+Olympic,7,1178
+Olympic,8,1411
+Olympic,9,1316
+Olympic,10,1402
+Olympic,11,1353
+Olympic,12,1651
+Olympic,13,1621
+Olympic,14,1835
+Olympic,15,1848
+Olympic,16,1922
+Olympic,17,2117
+Olympic,18,2151
+Olympic,19,1843
+Olympic,20,1691
+Olympic,21,1542
+Olympic,22,1361
+Olympic,23,1274
+Pacific,0,869
+Pacific,1,764
+Pacific,2,648
+Pacific,3,406
+Pacific,4,342
+Pacific,5,412
+Pacific,6,595
+Pacific,7,1098
+Pacific,8,1433
+Pacific,9,1302
+Pacific,10,1429
+Pacific,11,1517
+Pacific,12,1758
+Pacific,13,1803
+Pacific,14,1884
+Pacific,15,1937
+Pacific,16,2006
+Pacific,17,2114
+Pacific,18,2044
+Pacific,19,1878
+Pacific,20,1615
+Pacific,21,1502
+Pacific,22,1329
+Pacific,23,1182
+Rampart,0,639
+Rampart,1,577
+Rampart,2,678
+Rampart,3,441
+Rampart,4,271
+Rampart,5,324
+Rampart,6,521
+Rampart,7,987
+Rampart,8,1112
+Rampart,9,965
+Rampart,10,1024
+Rampart,11,1010
+Rampart,12,1166
+Rampart,13,1087
+Rampart,14,1286
+Rampart,15,1425
+Rampart,16,1415
+Rampart,17,1608
+Rampart,18,1593
+Rampart,19,1320
+Rampart,20,1174
+Rampart,21,1120
+Rampart,22,954
+Rampart,23,931
+Southeast,0,813
+Southeast,1,731
+Southeast,2,758
+Southeast,3,535
+Southeast,4,442
+Southeast,5,462
+Southeast,6,652
+Southeast,7,1086
+Southeast,8,1125
+Southeast,9,896
+Southeast,10,1051
+Southeast,11,1132
+Southeast,12,1240
+Southeast,13,1312
+Southeast,14,1510
+Southeast,15,1655
+Southeast,16,1664
+Southeast,17,1784
+Southeast,18,1813
+Southeast,19,1537
+Southeast,20,1526
+Southeast,21,1354
+Southeast,22,1248
+Southeast,23,1134
+Southwest,0,898
+Southwest,1,813
+Southwest,2,801
+Southwest,3,587
+Southwest,4,501
+Southwest,5,515
+Southwest,6,783
+Southwest,7,1731
+Southwest,8,1841
+Southwest,9,1407
+Southwest,10,1526
+Southwest,11,1613
+Southwest,12,1869
+Southwest,13,1878
+Southwest,14,2059
+Southwest,15,2263
+Southwest,16,2330
+Southwest,17,2539
+Southwest,18,2432
+Southwest,19,2010
+Southwest,20,1729
+Southwest,21,1592
+Southwest,22,1418
+Southwest,23,1259
+Topanga,0,623
+Topanga,1,527
+Topanga,2,539
+Topanga,3,320
+Topanga,4,257
+Topanga,5,275
+Topanga,6,476
+Topanga,7,1088
+Topanga,8,1161
+Topanga,9,1038
+Topanga,10,1090
+Topanga,11,1245
+Topanga,12,1612
+Topanga,13,1661
+Topanga,14,1704
+Topanga,15,1847
+Topanga,16,1688
+Topanga,17,1893
+Topanga,18,1694
+Topanga,19,1315
+Topanga,20,1266
+Topanga,21,1119
+Topanga,22,910
+Topanga,23,707
+Van Nuys,0,798
+Van Nuys,1,632
+Van Nuys,2,627
+Van Nuys,3,394
+Van Nuys,4,317
+Van Nuys,5,303
+Van Nuys,6,588
+Van Nuys,7,1342
+Van Nuys,8,1618
+Van Nuys,9,1401
+Van Nuys,10,1381
+Van Nuys,11,1468
+Van Nuys,12,1873
+Van Nuys,13,1844
+Van Nuys,14,1887
+Van Nuys,15,2112
+Van Nuys,16,1962
+Van Nuys,17,2006
+Van Nuys,18,1923
+Van Nuys,19,1590
+Van Nuys,20,1375
+Van Nuys,21,1189
+Van Nuys,22,1058
+Van Nuys,23,933
+West LA,0,689
+West LA,1,531
+West LA,2,475
+West LA,3,326
+West LA,4,232
+West LA,5,284
+West LA,6,526
+West LA,7,1136
+West LA,8,1704
+West LA,9,1763
+West LA,10,1625
+West LA,11,1788
+West LA,12,2062
+West LA,13,2041
+West LA,14,2098
+West LA,15,2259
+West LA,16,2290
+West LA,17,2363
+West LA,18,2127
+West LA,19,1622
+West LA,20,1278
+West LA,21,1135
+West LA,22,954
+West LA,23,900
+West Valley,0,779
+West Valley,1,662
+West Valley,2,663
+West Valley,3,458
+West Valley,4,324
+West Valley,5,411
+West Valley,6,693
+West Valley,7,1406
+West Valley,8,1604
+West Valley,9,1332
+West Valley,10,1379
+West Valley,11,1478
+West Valley,12,1666
+West Valley,13,1727
+West Valley,14,1766
+West Valley,15,1936
+West Valley,16,1812
+West Valley,17,2052
+West Valley,18,1878
+West Valley,19,1612
+West Valley,20,1298
+West Valley,21,1206
+West Valley,22,1070
+West Valley,23,943
+Wilshire,0,820
+Wilshire,1,736
+Wilshire,2,797
+Wilshire,3,429
+Wilshire,4,308
+Wilshire,5,337
+Wilshire,6,602
+Wilshire,7,1347
+Wilshire,8,1738
+Wilshire,9,1656
+Wilshire,10,1597
+Wilshire,11,1836
+Wilshire,12,2019
+Wilshire,13,2121
+Wilshire,14,2214
+Wilshire,15,2429
+Wilshire,16,2173
+Wilshire,17,2219
+Wilshire,18,2120
+Wilshire,19,1902
+Wilshire,20,1518
+Wilshire,21,1369
+Wilshire,22,1256
+Wilshire,23,1097
