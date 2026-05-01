@@ -1,7 +1,6 @@
-# =============================================================================
+
 #  Use Case 4 — Smart Traffic Management System
 #  Main PySpark Implementation 
-#
 #  Objectives:
 #    1. Identify peak traffic hours
 #    2. Detect congested routes
@@ -77,7 +76,7 @@ df.cache()
 
 
 # SECTION 4 — OBJECTIVE 1: IDENTIFY PEAK TRAFFIC HOURS
-#
+
 #  Patterns: Aggregation + Sorting + Filtering
 
 print("\n" + "=" * 60)
@@ -85,7 +84,7 @@ print("  OBJECTIVE 1 — Peak Traffic Hours")
 print("  Patterns: Aggregation + Sorting + Filtering")
 print("=" * 60)
 
-# ── Collisions by Hour ────────────────────────────────────────────────────────
+# Collisions by Hour
 print("\n[3] Collisions by Hour")
 
 collisions_by_hour = df \
@@ -95,7 +94,7 @@ collisions_by_hour = df \
 
 collisions_by_hour.show(10, truncate=False)
 
-# ── Collisions by Time of Day ─────────────────────────────────────────────────
+#Collisions by Time of Day 
 print("[4] Collisions by Time of Day")
 
 collisions_by_timeofday = df \
@@ -105,7 +104,7 @@ collisions_by_timeofday = df \
 
 collisions_by_timeofday.show(truncate=False)
 
-# ── Collisions by Day of Week ─────────────────────────────────────────────────
+# Collisions by Day of Week
 print("[5] Collisions by Day of Week")
 
 collisions_by_day = df \
@@ -115,7 +114,7 @@ collisions_by_day = df \
 
 collisions_by_day.show(truncate=False)
 
-# ── Weekend vs Weekday (Filtering) ────────────────────────────────────────────
+# Weekend vs Weekday (Filtering) 
 print("[6] Weekend vs Weekday — Filtering Pattern")
 
 weekend_vs_weekday = df \
@@ -125,7 +124,7 @@ weekend_vs_weekday = df \
 
 weekend_vs_weekday.show(truncate=False)
 
-# ── Collisions by Season ──────────────────────────────────────────────────────
+# Collisions by Season 
 print("[7] Collisions by Season")
 
 collisions_by_season = df \
@@ -138,7 +137,7 @@ collisions_by_season.show(truncate=False)
 
 
 # SECTION 5 — OBJECTIVE 2: DETECT CONGESTED ROUTES
-#
+
 #  Patterns: Filtering + Aggregation + Sorting + Join
 
 
@@ -147,7 +146,7 @@ print("  OBJECTIVE 2 — Detect Congested Routes")
 print("  Patterns: Filtering + Aggregation + Sorting + Join")
 print("=" * 60)
 
-# ── Most dangerous districts ──────────────────────────────────────────────────
+# Most dangerous districts
 print("\n[8] Most Dangerous Districts — Aggregation + Sorting")
 
 dangerous_areas = df \
@@ -157,7 +156,7 @@ dangerous_areas = df \
 
 dangerous_areas.show(21, truncate=False)
 
-# ── Road collisions only (Filtering) ──────────────────────────────────────────
+# Road collisions only (Filtering) 
 print("[9] Road-only Collisions — Filtering + Aggregation")
 
 road_collisions = df \
@@ -168,7 +167,7 @@ road_collisions = df \
 
 road_collisions.show(20, truncate=False)
 
-# ── Hotspot addresses (Filtering + Sorting) ───────────────────────────────────
+# Hotspot addresses (Filtering + Sorting) 
 print("[10] Hotspot Addresses — Filtering + Aggregation + Sorting")
 
 hotspot_addresses = df \
@@ -179,7 +178,7 @@ hotspot_addresses = df \
 
 hotspot_addresses.show(15, truncate=False)
 
-# ── Severity by district ──────────────────────────────────────────────────────
+# Severity by district 
 print("[11] Collision Severity by District — Aggregation")
 
 severity_by_area = df \
@@ -189,7 +188,7 @@ severity_by_area = df \
 
 severity_by_area.show(30, truncate=False)
 
-# ── Peak hour per district — JOIN Pattern ─────────────────────────────────────
+# Peak hour per district — JOIN Pattern
 print("[12] Peak Hour per District — Aggregation + Join")
 
 # Step A: count per (area, hour)
@@ -215,7 +214,7 @@ peak_per_area.show(21, truncate=False)
 
 
 # SECTION 6 — OBJECTIVE 3: ANALYZE VEHICLE FLOW PATTERNS
-#
+
 #  Patterns: Aggregation + Sorting
 
 
@@ -224,7 +223,7 @@ print("  OBJECTIVE 3 — Analyze Vehicle Flow Patterns")
 print("  Patterns: Aggregation + Sorting")
 print("=" * 60)
 
-# ── Year-over-year trend ──────────────────────────────────────────────────────
+#  Year-over-year trend 
 print("\n[13] Year-over-Year Trend — Aggregation + Sorting")
 
 yearly_trend = df \
@@ -235,7 +234,7 @@ yearly_trend = df \
 
 yearly_trend.show(20, truncate=False)
 
-# ── Monthly pattern ───────────────────────────────────────────────────────────
+# Monthly pattern 
 print("[14] Monthly Flow Pattern — Aggregation")
 
 monthly_trend = df \
@@ -245,7 +244,7 @@ monthly_trend = df \
 
 monthly_trend.show(12, truncate=False)
 
-# ── Hourly flow by district ───────────────────────────────────────────────────
+# Hourly flow by district 
 print("[15] Hourly Flow per District — Aggregation")
 
 hourly_flow = df \
@@ -255,7 +254,7 @@ hourly_flow = df \
 
 hourly_flow.show(20, truncate=False)
 
-# ── Road type breakdown ───────────────────────────────────────────────────────
+#  Road type breakdown 
 print("[16] Collisions by Road Type — Aggregation + Sorting")
 
 by_road_type = df \
@@ -303,45 +302,6 @@ save_csv(hourly_flow,             "obj3_hourly_flow")
 save_csv(by_road_type,            "obj3_road_type")
 
 print("\n  All results saved.")
-
-
-
-# SECTION 8 — SUMMARY
-
-
-top_hour    = collisions_by_hour.first()
-top_area    = dangerous_areas.first()
-top_hotspot = hotspot_addresses.first()
-top_peak    = peak_per_area.first()
-
-print("\n" + "=" * 60)
-print("  FINAL RESULTS SUMMARY")
-print("=" * 60)
-print(f"""
-  OBJECTIVE 1 — Peak Traffic Hours
-  Peak collision hour : {top_hour['Hour']}:00  ({top_hour['Time_of_Day']})
-  Collisions that hour: {top_hour['Total_Collisions']:,}
-  Busiest day         : {collisions_by_day.first()['Day_of_Week']}
-  Busiest season      : {collisions_by_season.first()['Season']}
-
-  OBJECTIVE 2 — Congested Routes
-  Most dangerous area : {top_area['Area_Name']}
-  Collisions there    : {top_area['Total_Collisions']:,}
-  Top hotspot address : {top_hotspot['Address']}
-  Peak hour (top area): {top_peak['Area_Name']} at {top_peak['Peak_Hour']}:00
-
-  OBJECTIVE 3 — Vehicle Flow Patterns
-  See HDFS output folder for yearly/monthly/hourly breakdowns.
-
-  Patterns used:
-  - Filtering   : Road type, hotspots, weekend/weekday
-  - Aggregation : Count by hour, area, day, month, year
-  - Sorting     : Rank by collision count descending
-  - Join        : Area totals joined with peak hour data
-
-  Output location: {OUTPUT_PATH}
-""")
-print("=" * 60)
 
 spark.stop()
 print("Done.")
