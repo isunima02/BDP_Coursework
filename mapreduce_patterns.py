@@ -1,5 +1,4 @@
-# =============================================================================
-#  Use Case 4 — Smart Traffic Management System
+
 #  MapReduce Design Patterns — Full RDD Implementation
 #
 #  This file demonstrates all 4 required MapReduce patterns using RDDs:
@@ -7,9 +6,7 @@
 #    Pattern 2 — Aggregation
 #    Pattern 3 — Sorting
 #    Pattern 4 — Join
-#
-#  Each pattern maps directly to a Use Case 4 objective.
-# =============================================================================
+
 
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
@@ -117,25 +114,23 @@ evening_sample.show(8, truncate=False)
 print("  Pattern 1 (Filtering) complete")
 
 
-# =============================================================================
+
 # PATTERN 2 — AGGREGATION
 #
 #  Purpose : Summarise data by grouping and counting
 #  Use Case: Count collisions per hour → find peak hours
 #            Count collisions per area → find most congested zones
 #  RDD ops : .map() → .reduceByKey() → result
-# =============================================================================
 
-print("\n" + "=" * 65)
+
 print("  PATTERN 2 — AGGREGATION")
 print("  Goal: Count collisions per hour and per area")
-print("=" * 65)
 
-# ── Collision count per hour (Map → ReduceByKey) ──────────────────────────
-#
+
+# Collision count per hour (Map → ReduceByKey)
 #  MAP    : each row → (hour, 1)
 #  REDUCE : sum all 1s per hour key
-#
+
 print("\n   Collisions per Hour")
 print("  MAP: row → (hour, 1)  |  REDUCE: sum by hour key")
 
@@ -154,7 +149,7 @@ hourly_df = spark.createDataFrame(
 print("\n  Collisions by Hour (0–23):")
 hourly_df.show(24, truncate=False)
 
-# ──  Collision count per area (Map → ReduceByKey) ──────────────────────────
+# Collision count per area (Map → ReduceByKey)
 #
 #  MAP    : each row → (area_name, 1)
 #  REDUCE : sum all 1s per area key
@@ -175,7 +170,7 @@ area_df = spark.createDataFrame(
 print("\n  Collisions by District:")
 area_df.orderBy(F.col("Collision_Count").desc()).show(21, truncate=False)
 
-# ──  Collision count per (Area, Hour) pair ─────────────────────────────────
+# Collision count per (Area, Hour) pair
 #
 #  MAP    : each row → ((area, hour), 1)
 #  REDUCE : sum by composite key
@@ -197,7 +192,7 @@ area_hour_df = spark.createDataFrame(
 print("\n  Top 20 (District, Hour) collision counts:")
 area_hour_df.orderBy(F.col("Collision_Count").desc()).show(20, truncate=False)
 
-# ──  Year-over-year trend (Map → ReduceByKey) ──────────────────────────────
+#  Year-over-year trend (Map → ReduceByKey)
 print("   Year-over-year collision trend")
 
 yearly_rdd = rdd \
@@ -216,21 +211,17 @@ yearly_df.show(20, truncate=False)
 
 print("  Pattern 2 (Aggregation) complete")
 
-
-# =============================================================================
 # PATTERN 3 — SORTING
 #
 #  Purpose : Rank results to find top/bottom N items
 #  Use Case: Find the top 10 peak hours, top 5 most dangerous areas
 #  RDD ops : .sortBy(key, ascending=False)
-# =============================================================================
 
-print("\n" + "=" * 65)
 print("  PATTERN 3 — SORTING")
 print("  Goal: Rank peak hours and most dangerous routes")
-print("=" * 65)
 
-# ──  Top 10 peak hours by collision count ──────────────────────────────────
+
+# Top 10 peak hours by collision count 
 print("\n  [Sort 3a] Top 10 peak hours — descending by collision count")
 
 top_hours_rdd = hourly_rdd \
@@ -244,7 +235,7 @@ for rank, (hour, count) in enumerate(top_10_hours, 1):
     bar = "█" * (count // 3000)
     print(f"  #{rank:<4} {hour:02d}:00  {count:,}  {bar}")
 
-# ── Top 5 most dangerous areas ───────────────────────────────────────────
+# Top 5 most dangerous areas
 print("\n   Top 5 most dangerous districts")
 
 top_areas_rdd = area_rdd \
@@ -257,7 +248,7 @@ print("  ----  ------------------  ----------")
 for rank, (area, count) in enumerate(top_5_areas, 1):
     print(f"  #{rank:<4} {area:<20} {count:,}")
 
-# ── Sort by year ascending (time series order) ───────────────────────────
+# Sort by year ascending (time series order) 
 print("\n  [Sort 3c] Yearly trend — ascending time series")
 
 sorted_years = yearly_rdd.sortBy(lambda x: x[0], ascending=True).collect()
@@ -280,26 +271,24 @@ for year, count in sorted_years:
 print("\n  Pattern 3 (Sorting) complete")
 
 
-# =============================================================================
+
 # PATTERN 4 — JOIN
 #
 #  Purpose : Combine two datasets by a shared key
 #  Use Case: Merge hourly collision counts with area-level stats
 #            so each (area, hour) row also shows the area's total
 #  RDD ops : RDD_A.join(RDD_B) on matching key
-# =============================================================================
 
-print("\n" + "=" * 65)
 print("  PATTERN 4 — JOIN")
 print("  Goal: Enrich (Area, Hour) data with area-level totals")
-print("=" * 65)
 
-# ── Prepare RDD : area-level total collisions ────────────────────────────────
+
+# Prepare RDD : area-level total collisions
 #    Key = Area_Name
 #    Value = total_collisions for that area
 rdd_A = area_rdd      # (area_name, total_collisions)
 
-# ── Prepare RDD : peak hour per area ────────────────────────────────────────
+# Prepare RDD : peak hour per area 
 #    Key = Area_Name
 #    Value = (peak_hour, peak_hour_count) — the hour with max collisions
 rdd_B = area_hour_rdd \
@@ -315,7 +304,7 @@ print("\n  RDD  (peak hour per area) — first 3:")
 for item in rdd_B.take(3):
     print(f"    {item}")
 
-# ── JOIN: rdd_A.join(rdd_B) → (area, (total, (peak_hour, peak_count))) ────────
+#  JOIN: rdd_A.join(rdd_B) → (area, (total, (peak_hour, peak_count))) 
 print("\n  Joining area totals with peak hour data")
 
 joined_rdd = rdd_A.join(rdd_B)
@@ -341,7 +330,7 @@ joined_df = spark.createDataFrame(
 print("\n  Joined Result — Area totals enriched with peak hour:")
 joined_df.show(21, truncate=False)
 
-# ── JOIN: hotspot addresses joined with area peak hour ─────────────────────────
+# JOIN: hotspot addresses joined with area peak hour 
 print("  [Join 4b] Hotspot addresses joined with district peak hour")
 
 # RDD C: hotspot address collision count — (area, (address, count))
@@ -380,13 +369,10 @@ hotspot_joined_df.show(15, truncate=False)
 print("  Pattern 4 (Join) complete")
 
 
-# =============================================================================
-# SAVE ALL MAPREDUCE OUTPUTS
-# =============================================================================
 
-print("\n" + "=" * 65)
+# SAVE ALL MAPREDUCE OUTPUTS
+
 print("  Saving MapReduce Pattern Outputs")
-print("=" * 65)
 
 def save(dataframe, name):
     path = f"{OUTPUT_PATH}/{name}"
@@ -419,37 +405,6 @@ top_areas_df = spark.createDataFrame(
 )
 save(top_areas_df, "pattern3_sort_top_areas")
 
-
-# =============================================================================
-# SUMMARY TABLE
-# =============================================================================
-
-print("\n" + "=" * 65)
-print("  MAPREDUCE DESIGN PATTERNS — SUMMARY")
-print("=" * 65)
-print("""
-  ┌─────────────┬────────────────────────────┬────────────────────────────┐
-  │ Pattern     │ RDD Operations Used        │ Traffic Analysis Purpose   │
-  ├─────────────┼────────────────────────────┼────────────────────────────┤
-  │ Filtering   │ .filter(lambda row: cond)  │ Isolate rush hour records  │
-  │             │                            │ Focus on road collisions   │
-  │             │                            │ Extract hotspot rows       │
-  ├─────────────┼────────────────────────────┼────────────────────────────┤
-  │ Aggregation │ .map(row → (key, 1))       │ Count per hour             │
-  │             │ .reduceByKey(a + b)        │ Count per district         │
-  │             │                            │ Count per (area, hour)     │
-  │             │                            │ Year-over-year trend       │
-  ├─────────────┼────────────────────────────┼────────────────────────────┤
-  │ Sorting     │ .sortBy(key, asc=False)    │ Rank top 10 peak hours     │
-  │             │                            │ Rank most dangerous areas  │
-  │             │                            │ Order yearly time series   │
-  ├─────────────┼────────────────────────────┼────────────────────────────┤
-  │ Join        │ rdd_A.join(rdd_B)          │ Merge area totals with     │
-  │             │ on matching key            │ peak hour data             │
-  │             │                            │ Attach district context    │
-  │             │                            │ to hotspot addresses       │
-  └─────────────┴────────────────────────────┴────────────────────────────┘
-""")
 
 spark.stop()
 print("All MapReduce patterns complete. Spark session stopped.")
