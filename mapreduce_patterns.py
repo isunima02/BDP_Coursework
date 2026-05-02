@@ -19,10 +19,9 @@ spark = SparkSession.builder \
 
 spark.sparkContext.setLogLevel("WARN")
 
-print("=" * 65)
 print("  MapReduce Design Patterns — RDD Implementation")
 print("  Use Case 4: Smart Traffic Management System")
-print("=" * 65)
+
 
 
 
@@ -52,10 +51,10 @@ print(f"  RDD type      : {type(rdd)}")
 #  Use Case: Identify peak traffic hours — isolate rush hour collisions
 #  RDD op  : .filter(lambda row: condition)
 # 
-print("\n" + "=" * 65)
+
 print("  PATTERN 1 — FILTERING")
 print("  Goal: Isolate rush hour and high-risk road collisions")
-print("=" * 65)
+
 
 # ── Filter: Morning Rush (06:00–09:00) ────────────────────────────────────
 morning_rush_rdd = rdd.filter(
