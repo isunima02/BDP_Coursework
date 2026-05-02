@@ -23,9 +23,9 @@ spark = SparkSession.builder \
 
 spark.sparkContext.setLogLevel("ERROR")
 
-print("=" * 60)
+
 print("  Use Case 4 — Smart Traffic Management System")
-print("=" * 60)
+
 print(f"  Spark version : {spark.version}")
 
 
@@ -79,10 +79,10 @@ df.cache()
 
 #  Patterns: Aggregation + Sorting + Filtering
 
-print("\n" + "=" * 60)
+
 print("  OBJECTIVE 1 — Peak Traffic Hours")
 print("  Patterns: Aggregation + Sorting + Filtering")
-print("=" * 60)
+
 
 # Collisions by Hour
 print("\n[3] Collisions by Hour")
@@ -141,10 +141,9 @@ collisions_by_season.show(truncate=False)
 #  Patterns: Filtering + Aggregation + Sorting + Join
 
 
-print("\n" + "=" * 60)
 print("  OBJECTIVE 2 — Detect Congested Routes")
 print("  Patterns: Filtering + Aggregation + Sorting + Join")
-print("=" * 60)
+
 
 # Most dangerous districts
 print("\n[8] Most Dangerous Districts — Aggregation + Sorting")
@@ -218,10 +217,10 @@ peak_per_area.show(21, truncate=False)
 #  Patterns: Aggregation + Sorting
 
 
-print("\n" + "=" * 60)
+
 print("  OBJECTIVE 3 — Analyze Vehicle Flow Patterns")
 print("  Patterns: Aggregation + Sorting")
-print("=" * 60)
+
 
 #  Year-over-year trend 
 print("\n[13] Year-over-Year Trend — Aggregation + Sorting")
@@ -269,9 +268,9 @@ by_road_type.show(truncate=False)
 # SECTION 7 — SAVE RESULTS TO HDFS
 
 
-print("\n" + "=" * 60)
+
 print("  Saving Results")
-print("=" * 60)
+
 
 def save_csv(dataframe, folder_name):
     path = f"{OUTPUT_PATH}/{folder_name}"
